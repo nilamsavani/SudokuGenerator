@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1516d2da-5f04-41a1-a69b-897b8c2240fb" name="Piyush@DESKTOP-DBC33GT 2019-07-18 19:36:36" runUser="DESKTOP-DBC33GT\Piyush" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="e5e1279d-88c4-4c48-b913-8c4560fb0cfb">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="Piyush_DESKTOP-DBC33GT 2019-07-18 19_36_36" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2019-07-18T19:36:36.3930853-04:00" queuing="2019-07-18T19:36:37.1786145-04:00" start="2019-07-18T19:36:37.2895488-04:00" finish="2019-07-18T19:36:38.3059698-04:00" />
+  <ResultSummary outcome="Warning">
+    <Counters total="4" executed="4" passed="4" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-DBC33GT" outcome="Warning" timestamp="2019-07-18T19:36:36.8488025-04:00">
+        <Text>Warning: Test Run deployment issue: The assembly or module 'WebGrease' directly or indirectly referenced by the test container 'E:\Nilam\FinalSudokuGenerator\SudokuGenerator\SudokuGenerator.Tests\bin\Debug\sudokugenerator.tests.dll' was not found.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="IsInvalidSudoku" storage="sudokugenerator.tests.dll" id="3ef73c48-ed65-3e45-97c0-ea45ed35b986">
+      <Execution id="67a95d33-dbb7-48c7-af70-87c2e05b5550" />
+      <TestMethod codeBase="E:/Nilam/FinalSudokuGenerator/SudokuGenerator/SudokuGenerator.Tests/bin/Debug/SudokuGenerator.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SudokuGenerator.Tests.Controllers.SudokuControllerTests, SudokuGenerator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsInvalidSudoku" />
+    </UnitTest>
+    <UnitTest name="IsValidSudoku" storage="sudokugenerator.tests.dll" id="50f7f8f5-ef93-68f3-0528-6152cd91b215">
+      <Execution id="3b0a3353-0e8c-49d1-978e-cb879580d5ed" />
+      <TestMethod codeBase="E:/Nilam/FinalSudokuGenerator/SudokuGenerator/SudokuGenerator.Tests/bin/Debug/SudokuGenerator.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SudokuGenerator.Tests.Controllers.SudokuControllerTests, SudokuGenerator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsValidSudoku" />
+    </UnitTest>
+    <UnitTest name="IsvalidSudokuFromService" storage="sudokugenerator.tests.dll" id="efcac092-f282-353a-f000-ab7bc26af9a8">
+      <Execution id="8671c94b-019a-4814-a6e1-4ad85b648c37" />
+      <TestMethod codeBase="E:/Nilam/FinalSudokuGenerator/SudokuGenerator/SudokuGenerator.Tests/bin/Debug/SudokuGenerator.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SudokuGenerator.Tests.Controllers.SudokuControllerTests, SudokuGenerator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsvalidSudokuFromService" />
+    </UnitTest>
+    <UnitTest name="IsInvalidSudokuWithZero" storage="sudokugenerator.tests.dll" id="f7d5bb50-5e53-3c71-dfe7-b3594923c572">
+      <Execution id="3fc19ff5-6270-4a07-aafc-206d0f5f6c7d" />
+      <TestMethod codeBase="E:/Nilam/FinalSudokuGenerator/SudokuGenerator/SudokuGenerator.Tests/bin/Debug/SudokuGenerator.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="SudokuGenerator.Tests.Controllers.SudokuControllerTests, SudokuGenerator.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="IsInvalidSudokuWithZero" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3ef73c48-ed65-3e45-97c0-ea45ed35b986" executionId="67a95d33-dbb7-48c7-af70-87c2e05b5550" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7d5bb50-5e53-3c71-dfe7-b3594923c572" executionId="3fc19ff5-6270-4a07-aafc-206d0f5f6c7d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="50f7f8f5-ef93-68f3-0528-6152cd91b215" executionId="3b0a3353-0e8c-49d1-978e-cb879580d5ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efcac092-f282-353a-f000-ab7bc26af9a8" executionId="8671c94b-019a-4814-a6e1-4ad85b648c37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="67a95d33-dbb7-48c7-af70-87c2e05b5550" testId="3ef73c48-ed65-3e45-97c0-ea45ed35b986" testName="IsInvalidSudoku" computerName="DESKTOP-DBC33GT" duration="00:00:00.0615808" startTime="2019-07-18T19:36:37.4804429-04:00" endTime="2019-07-18T19:36:38.1820379-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67a95d33-dbb7-48c7-af70-87c2e05b5550">
+    </UnitTestResult>
+    <UnitTestResult executionId="3fc19ff5-6270-4a07-aafc-206d0f5f6c7d" testId="f7d5bb50-5e53-3c71-dfe7-b3594923c572" testName="IsInvalidSudokuWithZero" computerName="DESKTOP-DBC33GT" duration="00:00:00.0002603" startTime="2019-07-18T19:36:38.1950327-04:00" endTime="2019-07-18T19:36:38.1990295-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fc19ff5-6270-4a07-aafc-206d0f5f6c7d">
+    </UnitTestResult>
+    <UnitTestResult executionId="3b0a3353-0e8c-49d1-978e-cb879580d5ed" testId="50f7f8f5-ef93-68f3-0528-6152cd91b215" testName="IsValidSudoku" computerName="DESKTOP-DBC33GT" duration="00:00:00.0005346" startTime="2019-07-18T19:36:38.2070240-04:00" endTime="2019-07-18T19:36:38.2120215-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b0a3353-0e8c-49d1-978e-cb879580d5ed">
+    </UnitTestResult>
+    <UnitTestResult executionId="8671c94b-019a-4814-a6e1-4ad85b648c37" testId="efcac092-f282-353a-f000-ab7bc26af9a8" testName="IsvalidSudokuFromService" computerName="DESKTOP-DBC33GT" duration="00:00:00.0020116" startTime="2019-07-18T19:36:38.2420045-04:00" endTime="2019-07-18T19:36:38.2480009-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8671c94b-019a-4814-a6e1-4ad85b648c37">
+    </UnitTestResult>
+  </Results>
+</TestRun>

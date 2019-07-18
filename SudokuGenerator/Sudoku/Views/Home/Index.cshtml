@@ -1,0 +1,101 @@
+﻿
+<div class="row">
+    @*loading image*@
+    <div class="overlayLoader" id="progressSpinner" style="display:none;">
+        <img src="~/Content/Images/loading.gif" class="loading-image" style="width:100px;height:100px;" alt="Loading" />
+    </div>
+
+    @*reload button*@
+    <div id="wrapper">
+        <button type="button" id="btnReload" class="btn btn-primary">Reload</button>
+    </div>
+
+    @*sudoku grid*@
+    <div class="center ">
+        <table id="tblSudoku" class="sudoku_table"></table>
+    </div>
+
+    @*show message if not able to generate sudoku board*@
+    <div class="noData" id="divNoDataFound" style="display:none;">
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //show progress spinner
+            $("#progressSpinner").show();
+
+            //get soduku on page load
+            GenerateSudoku();
+
+            //handle reload button click
+            $("#btnReload").click(function () {
+                GenerateSudoku();
+                return false;
+            });
+        });
+
+        function GenerateSudoku() {
+            // Send an AJAX GET request to service
+            $.ajax({
+                url: 'http://localhost:64852/sudoku/board',
+                type: "GET",
+                cache: false,
+                async: false,
+                crossDomain: true,
+                dataType: "json",
+                beforeSend: function () {
+                    //show progress spinner
+                    $("#progressSpinner").show();
+                },
+                success: function (data) {
+                    if (data == null || data == undefined || data.length == 0) {
+                        $('#tblSudoku').empty();
+                        $('#divNoDataFound').html("Currently we are not able to generate the valid sudoku board. Please try again later by clicking on Reload button ").show();
+                    }
+                    else {
+                        var sudokuGrid = [];
+                        var strHTML = "";
+
+                        //clear the content of the ul
+                        $('#tblSudoku').empty();
+
+                        //convert 1-D to 2-D array of 9*9
+                        while (data.length) sudokuGrid.push(data.splice(0, 9));
+
+                        $.each(sudokuGrid, function (key, item) {
+                            strHTML += "<tr class='sudoku_table_row'>";
+
+                            var str_array = item.toString().split(',');
+                            for (var i = 0; i < str_array.length; i++) {
+                                // Trim the excess whitespace.
+                                str_array[i] = str_array[i].replace(/^\s*/, "").replace(/\s*$/, "");
+                                strHTML += "<td class='sudoku_table_cell' >" + str_array[i] + "</td>";
+                            }
+                            strHTML += "</tr>";
+                            $('#tblSudoku').html(strHTML);
+                        });
+                    }
+
+                },
+                error: function (response) {
+                    console.log(response);
+                    $('#divNoDataFound').html(response.statusText).addClass("alert").show();
+                
+                },
+                complete: function () {
+                    //hide progress spinner
+                    $("#progressSpinner").hide();
+                }
+            });
+            return false;
+        }
+    </script>
+}
