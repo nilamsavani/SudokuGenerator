@@ -17,14 +17,14 @@ Postman
 To call the web api from Postman, use URL http://localhost:64852/sudoku/board using the GET request type.  
 
 ## Running the tests  
-Test cases will run automatically when you build/rebuild the solution in MS Visual Studio.     
+Tests will run automatically when you build/rebuild the solution in MS Visual Studio.     
 To run manually in MS Visual Studio: Test -> Windows -> Test Explorer -> Run All    
-You can also run the test cases in command prompt by following instructions given below:
+You can also run the tests in command prompt by following instructions given below:
 1. Run command prompt as an Administrator
-2. Navigate to the path which has Vstest.console.exe file in cmd. For example: cd C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow
+2. Navigate to the path which has Vstest.console.exe file in your machine in command prompt. For example: cd C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow
 3. Run command: Vstest.console.exe "path to the test project dll". For example: Vstest.console.exe "E:\SudokuGenerator\SudokuGenerator\SudokuGenerator.Tests\bin\Debug\SudokuGenerator.Tests.dll"  
 
-Test cases will call functions from the project and check for validity of generated sudoku.  
+Test will call functions from the api project SudokuGenerator and check for validity of generated sudoku.  
 
 **Valid Sudoku:**     
 ValidateSudokuBoard() will return true as it compliance with all the rules of sudoku.      
